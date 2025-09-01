@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ghazi | Portfolio</title>
+  <meta name="description" content="Portfolio for Ghazi – Dataingeniørstudent ved UiA og app-/webutvikler." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0d10; --fg: #e9edf1; --muted:#a7b0b8; --acc:#60a5fa; --card:#12161b; --line:#1f2937;
+      --pad: 1.2rem; --rad: 16px; --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--fg);}
+    a{color:var(--fg);text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:calc(var(--pad)*2) var(--pad)}
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem;position:sticky;top:0;background:linear-gradient(180deg,rgba(11,13,16,.9),rgba(11,13,16,.6) 60%,rgba(11,13,16,0));backdrop-filter: blur(8px);z-index:10;padding:1rem var(--pad)}
+    .brand{display:flex;align-items:center;gap:.8rem}
+    .avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#60a5fa,#34d399);display:grid;place-items:center;font-weight:800}
+    nav{display:flex;gap:1rem;flex-wrap:wrap}
+    nav a{padding:.55rem .8rem;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+    nav a:hover{border-color:#334155;color:var(--fg)}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--acc);color:#0b0d10;padding:.75rem 1rem;border-radius:999px;font-weight:700}
+    .btn.secondary{background:transparent;color:var(--fg);border:1px solid var(--line)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center;margin-top:2rem}
+    .title{font-size:clamp(2rem,6vw,3.5rem);line-height:1.05;margin:0 0 .8rem}
+    .lead{color:var(--muted);font-size:1.1rem}
+    .hero-card{background:linear-gradient(180deg,rgba(96,165,250,.12),rgba(52,211,153,.08));border:1px solid var(--line);border-radius:var(--rad);padding:1.25rem}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+    .section{margin:3rem 0}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:1.1rem}
+    .kpi{display:flex;gap:1rem;align-items:center}
+    .kpi .num{font-weight:800;font-size:1.6rem}
+    .pill{font-size:.85rem;border:1px solid var(--line);border-radius:999px;padding:.3rem .6rem;color:var(--muted)}
+    .proj{display:flex;flex-direction:column;gap:.7rem}
+    .proj h3{margin:.2rem 0}
+    .tags{display:flex;flex-wrap:wrap;gap:.4rem}
+    .tags span{font-size:.8rem;border:1px dashed #2b3645;border-radius:8px;padding:.2rem .45rem;color:#a9b5c2}
+    .row{display:flex;gap:.6rem;flex-wrap:wrap}
+    footer{border-top:1px solid var(--line);color:var(--muted);padding:2rem var(--pad);text-align:center}
+    .section h2{margin:0 0 .6rem;font-size:1.5rem}
+    .contact input,.contact textarea{width:100%;background:#0e1216;border:1px solid var(--line);border-radius:12px;color:var(--fg);padding:.9rem}
+    .contact textarea{resize:vertical;min-height:120px}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .gh{display:inline-flex;align-items:center;gap:.5rem}
+    .muted{color:var(--muted)}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.split{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="avatar">G</div>
+      <div>
+        <strong>Ghazi</strong>
+        <div class="muted" style="font-size:.9rem">Dataingeniørstudent @ UiA • App & web</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#prosjekter">Prosjekter</a>
+      <a href="#erfaring">Erfaring</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn" href="#cv">Last ned CV</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1 class="title">Bygger enkle, raske og nyttige løsninger.</h1>
+        <p class="lead">Jeg er Ghazi, dataingeniørstudent ved Universitetet i Agder. Jeg lager mobile og web‑apper med fokus på ytelse, brukervennlighet og ren arkitektur.
+        </p>
+        <div class="row" style="margin-top:1rem">
+          <a class="btn" href="#prosjekter">Se prosjekter</a>
+          <a class="btn secondary gh" href="https://github.com/" target="_blank" rel="noreferrer">GitHub →</a>
+          <a class="btn secondary" href="mailto:hello@timeghazi.com">Kontakt meg</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="grid">
+          <div class="card" style="grid-column: span 6">
+            <div class="kpi"><div class="num">1</div><div>Produkter i aktiv utvikling</div></div>
+            <div class="muted" style="margin-top:.5rem">WorkTime</div>
+          </div>
+          <div class="card" style="grid-column: span 6">
+            <div class="kpi"><div class="num">•React Native</div><div>Primær stack</div></div>
+            <div class="muted" style="margin-top:.5rem">NestJS, Next.js, Expo (React Native)</div>
+          </div>
+          <div class="card" style="grid-column: span 12">
+            <strong>Faglig fokus:</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prosjekter" class="section">
+      <h2>Utvalgte prosjekter</h2>
+      <div class="grid">
+                 <article class="card proj" style="grid-column: span 6">
+           <div class="pill">Internship • Mobilapp</div>
+           <h3>Varde – Diabetes</h3>
+           <p class="muted">React Native app for personer med diabetes som kobler til Google Health Connect og Apple HealthKit. Utviklet under 2-måneders internship hos Paral Dynamics.</p>
+           <div class="tags">
+             <span>React Native</span><span>TypeScript</span><span>Health Connect</span><span>HealthKit</span>
+           </div>
+           <div class="row">
+             <a class="btn secondary" href="#">Demo</a>
+           </div>
+         </article>
+        <article class="card proj" style="grid-column: span 6">
+          <div class="pill">Web + Mobil</div>
+          <h3>WorkTime – Skift & HR</h3>
+          <p class="muted">Plattform for skift, fravær, chat og varslinger. Web‑admin i Next.js, API i NestJS/Prisma, mobil i Expo.</p>
+          <div class="tags">
+            <span>Next.js</span><span>NestJS</span><span>Prisma</span><span>Expo</span><span>PostgreSQL</span>
+          </div>
+          <div class="row">
+            <a class="btn secondary" href="#">Repo</a>
+            <a class="btn secondary" href="#">Live</a>
+          </div>
+        </article>
+        <article class="card proj" style="grid-column: span 12">
+          <div class="pill">Skole & småting</div>
+          <h3>Mindre prosjekter</h3>
+          <p class="muted">Datastrukturer/algoritmer i C++ og C#, grafikkvisning i MonoGame, og diverse Python/Flask‑oppgaver.</p>
+          <div class="tags"><span>C#</span><span>C++</span><span>MonoGame</span><span>Python</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="erfaring" class="section">
+      <h2>Erfaring & utdanning</h2>
+      <div class="split">
+        <div class="card">
+          <strong>Arbeid</strong>
+          <ul>
+            <li><b>Circle K, Lillesand</b> – Deltid (kunde & drift)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Utdanning</strong>
+          <ul>
+            <li><b>Universitetet i Agder</b> – Dataingeniør (BSc)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section">
+      <h2>Kontakt</h2>
+      <div class="card contact">
+        <p class="muted">Send meg gjerne en e‑post – jeg svarer som regel raskt.</p>
+        <div class="row">
+          <a class="btn" href="mailto:hello@timeghazi.com">hello@timeghazi.com</a>
+          <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Ghazi. Bygget med ren HTML/CSS. Hostes på GitHub Pages.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
